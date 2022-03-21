@@ -1,3 +1,7 @@
+package controller;
+
+import model.HighScore;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Properties;

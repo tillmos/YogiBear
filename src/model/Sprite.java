@@ -1,3 +1,5 @@
+package model;
+
 import java.awt.*;
 
 public class Sprite {
@@ -61,4 +63,5 @@ public class Sprite {
     public void setHeight(int height) {
         this.height = height;
     }
+    ///commeentt
 }

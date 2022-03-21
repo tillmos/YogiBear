@@ -1,3 +1,4 @@
+package controller;
 
 import java.awt.event.ActionEvent;
 import java.sql.Time;
@@ -13,6 +14,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.KeyStroke;
 import javax.swing.Timer;
+
+import model.*;
+
 
 import javax.swing.*;
 
@@ -59,11 +63,11 @@ public class GameEngine extends JPanel {
                 timeLabel.setText(time.toString());
                 menuBar.add(timeLabel);
                 lives = 3;
-                background = new ImageIcon("src/park.jpg").getImage();
-                Image bearimage = new ImageIcon("src/YogiBear.png").getImage();
+                background = new ImageIcon("src/resource/park.jpg").getImage();
+                Image bearimage = new ImageIcon("src/resource/YogiBear.png").getImage();
                 bear = new Bear(5,5,60,60,bearimage);
-                Image guardimage= new ImageIcon("src/guard.png").getImage();
-                Image heartimage = new ImageIcon("src/heartfinal.png").getImage();
+                Image guardimage= new ImageIcon("src/resource/guard.png").getImage();
+                Image heartimage = new ImageIcon("src/resource/heartfinal.png").getImage();
                 heart = new Heart(720,10,20,20,heartimage);
                 heart2 = new Heart(740,10,20,20,heartimage);
                 heart3 = new Heart(760,10,20,20,heartimage);
@@ -192,9 +196,9 @@ public class GameEngine extends JPanel {
                 } catch (IOException ex) {
                         Logger.getLogger(GameEngine.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
-                Image bearimage = new ImageIcon("src/YogiBear.png").getImage();
+                Image bearimage = new ImageIcon("src/resource/YogiBear.png").getImage();
                 bear = new Bear(5,5,60,60,bearimage);
-                Image heartimage = new ImageIcon("src/heartfinal.png").getImage();
+                Image heartimage = new ImageIcon("src/resource/heartfinal.png").getImage();
 
         }
         public void newGame() {
@@ -204,10 +208,10 @@ public class GameEngine extends JPanel {
                         Logger.getLogger(GameEngine.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
                 this.levelNum = 0;
-                Image bearimage = new ImageIcon("src/YogiBear.png").getImage();
+                Image bearimage = new ImageIcon("src/resource/YogiBear.png").getImage();
                 bear = new Bear(5,5,60,60,bearimage);
                 lives = 3;
-                Image heartimage = new ImageIcon("src/heartfinal.png").getImage();
+                Image heartimage = new ImageIcon("src/resource/heartfinal.png").getImage();
                 heart = new Heart(720,10,20,20,heartimage);
                 heart2 = new Heart(740,10,20,20,heartimage);
                 heart3 = new Heart(760,10,20,20,heartimage);
@@ -278,7 +282,6 @@ class NewFrameListener implements ActionListener {
                                 }
                         }
                 }
-
 
                 repaint();
                 if (level.isOver()) {
