@@ -1,8 +1,13 @@
+package view;
+
+import controller.GameEngine;
+import model.HighScore;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.sql.Time;
 import java.util.ArrayList;
+import controller.DataStructuresReachingClass;
 
 public class YogiBearGUI implements ActionListener {
     private JFrame frame;
@@ -14,7 +19,7 @@ public class YogiBearGUI implements ActionListener {
     DataStructuresReachingClass dataStructuresReachingClass;
 
     public YogiBearGUI(){
-        frame = new JFrame("Yogi Bear");
+        frame = new JFrame("Yogi module.Bear");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JMenuBar mb = new JMenuBar();
@@ -38,34 +43,6 @@ public class YogiBearGUI implements ActionListener {
         } catch (Exception ex){
             System.out.println(ex.getMessage());
         }
-        /*
-        newGame.addMouseListener(new MouseListener() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                System.out.println("hi");
-            }
-
-            @Override
-            public void mousePressed(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mouseReleased(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mouseEntered(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-
-            }
-        });
-        */
 
         frame.setPreferredSize(new Dimension(800,600));
         frame.setResizable(false);

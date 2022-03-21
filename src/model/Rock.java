@@ -1,3 +1,5 @@
+package model;
+
 import java.awt.*;
 
 public class Rock extends Sprite{

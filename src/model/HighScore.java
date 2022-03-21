@@ -1,3 +1,5 @@
+package model;
+
 import java.sql.Time;
 
 public class HighScore {

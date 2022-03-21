@@ -1,3 +1,5 @@
+package model;
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.BufferedReader;
@@ -44,24 +46,24 @@ public class Level {
             int x = 0;
             for (int i = 0; i < 16; i++) {
                 if (line.charAt(i) == '1') {
-                    Image guardimage = new ImageIcon("src/guard.png").getImage();
+                    Image guardimage = new ImageIcon("src/resource/guard.png").getImage();
                     guards.add(new Guard(i * 50, y * 50, GUARD_WIDTH, GUARD_HEIGHT, guardimage));
                 }
                 if (line.charAt(i) == '2') {
-                    Image treeimage = new ImageIcon("src/tree.png").getImage();
+                    Image treeimage = new ImageIcon("src/resource/tree.png").getImage();
                     trees.add(new Tree(i * 50, y * 50, TREE_WIDTH, TREE_HEIGHT, treeimage));
 
                 }
                 if (line.charAt(i) == '3') {
-                    Image basketimage = new ImageIcon("src/basketfinal.png").getImage();
+                    Image basketimage = new ImageIcon("src/resource/basketfinal.png").getImage();
                     baskets.add(new Basket(i * 50 - 10, y * 50 - 10, BASKET_WIDTH, BASKET_HEIGHT, basketimage));
                 }
                 if (line.charAt(i) == '4') {
-                    Image rockimage = new ImageIcon("src/rock.png").getImage();
+                    Image rockimage = new ImageIcon("src/resource/rock.png").getImage();
                     rocks.add(new Rock(i * 50 - 10, y * 50 - 10, ROCK_WIDTH, ROCK_HEIGHT, rockimage));
                 }
                 if(line.charAt(i) == '5'){
-                    Image heartimage = new ImageIcon("src/heartfinal.png").getImage();
+                    Image heartimage = new ImageIcon("src/resource/heartfinal.png").getImage();
                     hearts.add(new Heart(i*50,y*50,20,20,heartimage));
 
                 }

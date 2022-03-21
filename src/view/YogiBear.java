@@ -1,3 +1,5 @@
+package view;
+
 public class YogiBear {
 
     public static void main(String[] args){
